@@ -1,0 +1,21 @@
+﻿<div id="content_trai">
+    <ul>
+            <li>@Ajax.ActionLink("Chinh Sua Thong Tin","EditInfo","home",
+                new {load_Layout="0"},
+                new AjaxOptions{
+                    HttpMethod="POST",
+                    InsertionMode= InsertionMode.Replace,
+                    UpdateTargetId="content_phai",
+                    LoadingElementId="loading",
+                    OnBegin="HideBody",
+                    OnComplete="ShowBody"
+                })              
+            </li>
+    </ul>
+</div>
+<div id="content_phai">
+    @RenderBody()
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@RenderSection("scripts", false)

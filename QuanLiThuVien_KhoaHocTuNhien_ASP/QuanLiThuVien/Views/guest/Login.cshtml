@@ -1,0 +1,20 @@
+﻿<script type="text/javascript">
+    function doTheSubmit() {
+        var doc = window.opener.document,
+            theForm = doc.getElementById("theForm"),
+            user = doc.getElementById("user"),
+            pass=doc.getElementById("pass");
+        user.value = document.getElementById("username").value;
+        pass.value = document.getElementById("password").value;
+        window.close();
+        theForm.submit();
+    }
+</script>
+<h3>Login</h3><br />
+UserName<br/>
+<input type="text" id="username" /> <br />
+
+PassWord<br />
+<input type="password" id="password" /><br />
+<input type="button" value="Login" onclick="doTheSubmit()"/>
+

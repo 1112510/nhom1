@@ -1,0 +1,29 @@
+﻿@model IEnumerable<QuanLiThuVien.Models.DocGia_TK>
+@{
+    ViewBag.Title = "TK_DG_Khoa";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 style="text-align:center;"> Thống Kê Đọc Giả Theo Khoa</h2>
+    <div style="float:left;">
+        <img src="@ViewBag.link" />
+    </div>
+    <div style="float:left; padding: 2%;">
+        <table id="tk_dg_khoa">
+            <tr>
+                <th>Khoa</th>
+                <th>tong so</th>
+                <th>phan tram</th>
+            </tr>
+            @foreach (var tam in Model)
+            {
+                <tr>
+                    <td>@tam.ten</td>
+                    <td>@tam.tong</td>
+                    <td>@(((double)tam.tong/int.Parse(ViewBag.tongSo))*100)</td>
+                </tr>
+            }
+        </table>
+    </div>
+
+
+    

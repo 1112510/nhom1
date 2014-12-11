@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../Content/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="@Url.Content("~/Content/CSS/giaodien_type_thuvien.css")" />
+    <script type="text/javascript">
+        function PopUpLogin() {
+            window.showModalDialog("/guest/Login", "log", "dialogHeight:300px; dialogWidth:400px;");
+        }
+        function HideBody() {
+            $("#all_page").hide();
+        }
+        function ShowBody() {
+            $("#all_page").show();
+        }
+    </script>
+</head>
+<body id="top">   
+    <div class="wrapper row0">
+        <div id="topbar" class="clear">
+            <!-- ################################################################################################ -->
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">A - Z Index</a></li>
+                        @if (Session["Username"] != null)
+                        {
+                   
+                            <li><a href="home/LogOut">Dang xuat</a></li>
+                            <li>
+                                @Ajax.ActionLink("chinh sua thong tin", "EditInfo", "home"
+                                , new { load_Layout = "1" },
+                                new AjaxOptions
+                                {
+                                    HttpMethod = "POST",
+                                    InsertionMode = InsertionMode.Replace,
+                                    UpdateTargetId = "content",
+                                    LoadingElementId = "loading",
+                                    OnBegin = "HideBody",
+                                    OnComplete = "ShowBody"
+
+                                })
+                            </li>
+                        }
+                        else
+                        {
+                            
+                            <li>
+                                @Ajax.ActionLink("dang ki doc gia","HocOnline", "guest", new AjaxOptions
+                                {
+                                    HttpMethod = "POST",
+                                    InsertionMode = InsertionMode.Replace,
+                                    UpdateTargetId = "content",
+                                    LoadingElementId = "loading",
+                                    OnBegin="HideBody",
+                                    OnComplete="ShowBody"
+                                })
+                            </li>
+                            <li>
+                                <a href="#" onclick="window.open('/guest/Login', '', 'height=400,width=400');">Dang nhap</a>
+                            </li>  
+                        }                     
+                </ul>
+                <form  id="theForm" action="guest/Login1" method="GET">
+                    <input type="hidden" id="user" name="user"/>
+                    <input type="hidden" id="pass" name="pass" />                
+                 </form>    
+            </nav>
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <!-- ################################################################################################ -->
+            <div id="logo" class="fl_left">
+                <h1><a href="index.html">UNIVERSITY OF SCIENCE</a></h1>
+                
+            </div>
+            <div class="fl_right">
+                <form class="clear" method="post" action="#">
+                    <fieldset>
+                        <legend>Search:</legend>
+                        <input type="text" value="" placeholder="Search Here">
+                        <button class="fa fa-search" type="submit" title="Search"><em>Search</em></button>
+                    </fieldset>
+                </form>
+            </div>
+            <!-- ################################################################################################ -->
+        </header>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="wrapper row2">
+        <div class="rounded">
+            <nav id="mainav" class="clear">
+                <!-- ################################################################################################ -->
+                <ul class="clear">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li>
+                        <a class="drop" href="#">Pages</a>
+                        <ul>
+                            <li><a href="pages/gallery.html">Gallery</a></li>
+                            <li><a href="pages/portfolio.html">Portfolio</a></li>
+                            <li><a href="pages/full-width.html">Full Width</a></li>
+                            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+                            <li><a href="pages/sidebar-left-2.html">Sidebar Left 2</a></li>
+                            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+                            <li><a href="pages/sidebar-right-2.html">Sidebar Right 2</a></li>
+                            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="drop" href="#">Dropdown</a>
+                        <ul>
+                            <li><a href="#">Level 2</a></li>
+                            <li>
+                                <a class="drop" href="#">Level 2 + Drop</a>
+                                <ul>
+                                    <li><a href="#">Level 3</a></li>
+                                    <li><a href="#">Level 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Link Text</a></li>
+                    <li><a href="#">Another Link Text</a></li>
+                    <li><a href="#">This a very long link</a></li>
+                    <li><a href="#">This is the last</a></li>
+                </ul>
+                <!-- ################################################################################################ -->
+            </nav>
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+     <div class="wrapper">
+        <div id="slider">
+            <div id="slide-wrapper" class="rounded clear">
+                <!-- ################################################################################################ -->
+                <figure id="slide-1">
+                    <a class="view" href="#"><img src="../Content/images/web_images/slider/1.png" alt=""></a>
+                </figure>
+                
+                <!-- ################################################################################################ -->
+                @*<ul id="slide-tabs">
+                    <li><a href="#slide-1">All About The University</a></li>
+                    <li><a href="#slide-2">Why You Should Study With Us</a></li>
+                    <li><a href="#slide-3">Education And Student Experience</a></li>
+                    <li><a href="#slide-4">Alumni And Its Donors</a></li>
+                    <li><a href="#slide-5">Latest University News &amp; Events</a></li>
+                </ul>*@
+                <!-- ################################################################################################ -->
+            </div>
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row3">
+        <div class="rounded">
+            <div id="content">
+                @RenderBody()
+            </div>
+            <!--<main class="container clear">
+                
+                
+            </main>-->
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    
+    <div class="wrapper row4">
+        <div class="rounded">
+            <footer id="footer" class="clear">
+                <!-- ################################################################################################ -->
+                <div class="one_third first">
+                    <figure class="center">
+                        <img class="btmspace-15" src="../Content/images/web_images/worldmap.png" alt="">
+                        <figcaption><a href="#">Find Us With Google Maps &raquo;</a></figcaption>
+                    </figure>
+                </div>
+                <div class="one_third">
+                    <address>
+                        Long Educational Facility Name<br>
+                        Address Line 2<br>
+                        Town/City<br>
+                        Postcode/Zip<br>
+                        <br>
+                        <i class="fa fa-phone pright-10"></i> 0949 243 987<br>
+                        <i class="fa fa-envelope-o pright-10"></i> <a href="#">dvvan1993@gmail.com</a>
+                    </address>
+                </div>
+                <div class="one_third">
+                    <p class="nospace btmspace-10">Stay Up to Date With What's Happening</p>
+                    <ul class="faico clear">
+                        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="faicon-flickr" href="#"><i class="fa fa-flickr"></i></a></li>
+                        <li><a class="faicon-rss" href="#"><i class="fa fa-rss"></i></a></li>
+                    </ul>
+                    <form class="clear" method="post" action="#">
+                        <fieldset>
+                            <legend>Subscribe To Our Newsletter:</legend>
+                            <input type="text" value="" placeholder="Enter Email Here&hellip;">
+                            <button class="fa fa-sign-in" type="submit" title="Sign Up"><em>Sign Up</em></button>
+                        </fieldset>
+                    </form>
+                </div>
+                <!-- ################################################################################################ -->
+            </footer>
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row5">
+        <div id="copyright" class="clear">
+            <!-- ################################################################################################ -->
+            <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">Domain Name</a></p>
+            <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+    <!-- JAVASCRIPTS -->
+    <script src="./Content/layout/scripts/jquery.min.js"></script>
+    <script src="./Content/layout/scripts/jquery.fitvids.min.js"></script>
+    <script src="./Content/layout/scripts/jquery.mobilemenu.js"></script>
+    <script src="./Content/layout/scripts/tabslet/jquery.tabslet.min.js"></script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("scripts", false)
+</body>
+</html>

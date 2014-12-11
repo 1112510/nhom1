@@ -1,0 +1,114 @@
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\QuanLiThuVien.dll.config
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\QuanLiThuVien.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\QuanLiThuVien.pdb
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Antlr3.Runtime.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\EntityFramework.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Microsoft.Web.Infrastructure.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Newtonsoft.Json.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Mvc.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Optimization.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Providers.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Razor.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Deployment.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Razor.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\WebGrease.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\EntityFramework.xml
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Newtonsoft.Json.xml
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Mvc.xml
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Razor.xml
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.xml
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Deployment.xml
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Razor.xml
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\obj\Debug\QuanLiThuVien.csprojResolveAssemblyReference.cache
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\obj\Debug\QuanLiThuVien.dll
+c:\users\11125_000\documents\visual studio 2013\Projects\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\obj\Debug\QuanLiThuVien.pdb
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\QuanLiThuVien.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\QuanLiThuVien.pdb
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Antlr3.Runtime.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\EntityFramework.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Microsoft.Web.Infrastructure.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Newtonsoft.Json.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Net.Http.Formatting.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Http.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Http.WebHost.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Mvc.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Optimization.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Providers.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Razor.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Deployment.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Razor.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\WebGrease.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\EntityFramework.xml
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Newtonsoft.Json.xml
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Net.Http.Formatting.xml
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Http.xml
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Http.WebHost.xml
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Mvc.xml
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Razor.xml
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.xml
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Deployment.xml
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Razor.xml
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\obj\Debug\QuanLiThuVien.csprojResolveAssemblyReference.cache
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\obj\Debug\QuanLiThuVien.dll
+E:\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\obj\Debug\QuanLiThuVien.pdb
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\QuanLiThuVien.dll.config
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\QuanLiThuVien.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\QuanLiThuVien.pdb
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Antlr3.Runtime.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\EntityFramework.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Newtonsoft.Json.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Mvc.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Optimization.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Providers.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Razor.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Deployment.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Razor.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\WebGrease.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\EntityFramework.xml
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Newtonsoft.Json.xml
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Mvc.xml
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Razor.xml
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.xml
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Deployment.xml
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Razor.xml
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\obj\Debug\QuanLiThuVien.csprojResolveAssemblyReference.cache
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\obj\Debug\QuanLiThuVien.dll
+C:\Users\11125_000\Documents\Visual Studio 2013\Projects\thu muc khac\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\obj\Debug\QuanLiThuVien.pdb
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\QuanLiThuVien.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\QuanLiThuVien.pdb
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Antlr3.Runtime.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\EntityFramework.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Microsoft.Web.Infrastructure.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Newtonsoft.Json.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Net.Http.Formatting.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Http.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Http.WebHost.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Mvc.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Optimization.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Providers.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Razor.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Deployment.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Razor.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\WebGrease.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\EntityFramework.xml
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\Newtonsoft.Json.xml
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Net.Http.Formatting.xml
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Http.xml
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Http.WebHost.xml
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Mvc.xml
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.Razor.xml
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.xml
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Deployment.xml
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\bin\System.Web.WebPages.Razor.xml
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\obj\Debug\QuanLiThuVien.dll
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\obj\Debug\QuanLiThuVien.pdb
+F:\CHUYEN NGANH\PHAT TRIEN UNG DUNG HTTT HIEN DAI\Bai tap\QuanLiThuVien_KhoaHocTuNhien\QuanLiThuVien\obj\Debug\QuanLiThuVien.csprojResolveAssemblyReference.cache

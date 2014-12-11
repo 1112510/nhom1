@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLThuVienModelStoreContainer" CdmEntityContainer="QLThuVienEntities">
+    <EntitySetMapping Name="tbl_DocGia">
+      <EntityTypeMapping TypeName="QLThuVienModel.tbl_DocGia">
+        <MappingFragment StoreEntitySet="tbl_DocGia">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="MSSV" ColumnName="MSSV" />
+          <ScalarProperty Name="Khoa" ColumnName="Khoa" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="NgayCapNhat" ColumnName="NgayCapNhat" />
+          <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_DocGia_Tam">
+      <EntityTypeMapping TypeName="QLThuVienModel.tbl_DocGia_Tam">
+        <MappingFragment StoreEntitySet="tbl_DocGia_Tam">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="MSSV" ColumnName="MSSV" />
+          <ScalarProperty Name="Khoa" ColumnName="Khoa" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="NgayCapNhat" ColumnName="NgayCapNhat" />
+          <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

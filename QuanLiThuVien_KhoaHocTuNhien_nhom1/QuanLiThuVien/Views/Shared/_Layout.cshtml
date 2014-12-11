@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="@Url.Content("~/Content/CSS/giaodien_type_thuvien.css")" />
+
+
+</head>
+<body>
+    <div id="all_page">
+        
+        <div id="header">
+            <div id="header_school">
+            THƯ VIỆN ĐẠI HỌC<br>
+            KHOA HỌC TỰ NHIÊN <br>
+            TP HỒ CHÍ MINH<br>
+            </div>@*header ten truong*@
+            
+            <div id="header_menu">
+                   <div id="header_menu_tren">
+                       <ul>
+                           <li><a href="#">Home</a></li>
+                           <li><a href="#">About Us</a></li>
+                           <li>
+                               <a href="#">News</a>
+                               <ul>
+                                   <li><a href="#">Sub menu</a></li>
+                                   <li><a href="#">Sub menu</a></li>
+                               </ul>
+                           </li>
+                           <li><a href="#">Services</a></li>
+                           <li><a href="#">Site Map</a></li>
+                          
+                       </ul>
+                   </div>@*header_menu_top*@
+                    <br>
+                 <br>
+                    <hr/>
+                   <div id="header_menu_duoi">
+                       <ul>
+                           <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                           <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                           <li>
+                               @Html.ActionLink("Home", "Index", "Home")
+                               
+                           </li>
+                           <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                           <li>@Html.ActionLink("Home", "Index", "Home")</li>
+
+                       </ul>
+                   </div>@*header_menu_up*@
+
+            </div>@*header menu*@
+            <div id="header_phai">
+                something here
+            </div>
+        </div>@*quan li header*@
+        
+        <div id="banner">
+            <!--<img src="../Content/images/website/image_u4.jpg" style="width: initial;"/>-->
+        </div>@*quan li banner*@
+
+        <div id="content">
+            @RenderBody()
+        </div>@*quan li body*@
+        
+        <div id="footer">
+            1112516 - Đinh Văn Vạn
+        </div>@*quan li footer*@
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryval")
+        @RenderSection("scripts", false)
+    </div>@*quan li ca trang web*@
+</body>
+</html>

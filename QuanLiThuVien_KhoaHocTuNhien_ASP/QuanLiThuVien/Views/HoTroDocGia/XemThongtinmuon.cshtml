@@ -1,0 +1,57 @@
+﻿@model IEnumerable<QuanLiThuVien.Models.phieumuon>
+
+
+<table style=" border-collapse:collapse" cellpadding="5px" border="1">
+    <tr>
+        <th>
+            Tên sách
+        </th>
+        
+        <th>
+            Tác Giả
+        </th>
+        <th>
+            Nhà Xuất Bản
+        </th>
+        <th>
+            Ngày mượn
+        </th>
+        <th>
+            Ngày hết hạn
+        </th>
+        <th>
+            Số lần gia hạn
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sach.Tensach)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Sach.Tacgia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sach.Namsx)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ngaymuon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ngayhethan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SolanGH)
+            </td>
+            <td>
+
+                @Html.ActionLink("Gia Hạn", "giahan",
+            new { id = item.IDsach }, new { onclick = "return confirm('Ban muon gia han sach nay ?')" })
+            </td>
+        </tr>
+    }
+
+</table>
+

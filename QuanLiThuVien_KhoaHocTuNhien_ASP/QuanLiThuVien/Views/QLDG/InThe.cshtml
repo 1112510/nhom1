@@ -1,0 +1,32 @@
+﻿@model QuanLiThuVien.Models.tbl_DocGia
+
+@{
+    //ViewBag.Title = "InThe";
+}
+<html>
+    <head>
+        <title>In the doc gia</title>
+    </head>
+    <body style="height:250px; width:350px; background-color: #b3faa5; border:black solid 1px;">
+        <table border="0">
+                <tr>
+                    <td>
+                        <img width="150" height="120" src="@Url.Content("~/content/images/docgia/"+Model.ID +".png" )" />
+                    </td>
+                    <td>
+                        <ul>
+                            <li style="text-align:center;"> THE THU VIEN</li>
+                            <li>Ho ten: @Model.Ten</li>
+                            <li>Gioi tinh: @Model.GioiTinh</li>
+                            <li>Dia chi: @Model.DiaChi</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <img width="150" height="80" src="@Url.Content("~/content/images/barcode/"+Model.ID+".gif" )" />
+                    </td>
+                </tr>
+        </table>
+    </body>
+</html>

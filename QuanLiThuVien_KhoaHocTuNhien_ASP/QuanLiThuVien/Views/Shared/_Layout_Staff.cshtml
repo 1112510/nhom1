@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../Content/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="@Url.Content("~/Content/CSS/giaodien_type_thuvien.css")" />
+    <script type="text/javascript">
+        function HideBody() {
+            $("body").hide();
+        }
+        function ShowBody() {
+            $("body").show();
+        }
+    </script>
+</head>
+<body id="top">   
+    <div class="wrapper row0">
+        <div id="topbar" class="clear">
+            <!-- ################################################################################################ -->
+            <nav>
+                <ul>
+                    <li>@Html.ActionLink("Home","main","QLDG")</li>
+                    <li>@Html.ActionLink("Dang xuat","LogOut","home")</li>
+                    <li>
+                        @Ajax.ActionLink("chinh sua thong tin", "EditInfo", "home"
+                        ,new { load_Layout = "1" },
+                        new AjaxOptions
+                        {
+                            HttpMethod = "POST",
+                            InsertionMode = InsertionMode.Replace,
+                            UpdateTargetId = "content",
+                            LoadingElementId = "loading",
+                            OnBegin = "HideBody",
+                            OnComplete = "ShowBody"
+
+                        })
+                    </li>
+                                   
+                </ul>   
+            </nav>
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="wrapper row3">
+        <div class="rounded">
+            <div id="content">
+                @RenderBody()
+            </div>
+
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+
+    <!-- JAVASCRIPTS -->
+    <script src="./Content/layout/scripts/jquery.min.js"></script>
+    <script src="./Content/layout/scripts/jquery.fitvids.min.js"></script>
+    
+    <script src="./Content/layout/scripts/tabslet/jquery.tabslet.min.js"></script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("scripts", false)
+</body>
+</html>

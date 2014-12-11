@@ -1,0 +1,61 @@
+﻿@model IEnumerable<QuanLiThuVien.Models.phieumuon>
+
+
+
+@{
+    ViewBag.Title = "Index";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <table style=" border-collapse:collapse" cellpadding="5px" border="1">
+        <tr>
+            <th>
+                Tên sách
+            </th>
+            <th>
+                ID sách
+            </th>
+            <th>
+                Ngày mượn
+            </th>
+            <th>
+                Ngày hết hạn
+            </th>
+            <th>
+                Số lần gia hạn
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sach.Tensach)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.IDsach)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ngaymuon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ngayhethan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SolanGH)
+                </td>
+                <td>
+
+                    @Ajax.ActionLink("Gia Hạn", "giahan", "HoTroDocGia",
+                    new { id = item.IDsach }, new AjaxOptions
+                    {
+                        HttpMethod = "POST",
+                        InsertionMode = InsertionMode.Replace,
+                        UpdateTargetId = "content_phai"
+                    })
+                </td>
+            </tr>
+        }
+
+    </table>

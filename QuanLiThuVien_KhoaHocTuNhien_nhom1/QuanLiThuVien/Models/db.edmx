@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ThuVien_TrailModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ThuVien_TrailModelStoreContainer">
+          <EntitySet Name="tbl_DocGia" EntityType="ThuVien_TrailModel.Store.tbl_DocGia" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_DocGia_Tam" EntityType="ThuVien_TrailModel.Store.tbl_DocGia_Tam" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="tbl_DocGia">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="char" Nullable="false" MaxLength="8" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="char" MaxLength="50" />
+          <Property Name="SDT" Type="char" MaxLength="12" />
+          <Property Name="CMND" Type="char" MaxLength="12" />
+          <Property Name="MSSV" Type="char" MaxLength="8" />
+          <Property Name="Khoa" Type="nvarchar" MaxLength="50" />
+          <Property Name="NgaySinh" Type="datetime" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
+          <Property Name="NgayCapNhat" Type="datetime" />
+          <Property Name="NgayHetHan" Type="datetime" />
+          <Property Name="User" Type="char" Nullable="false" MaxLength="10" />
+          <Property Name="Pass" Type="char" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tbl_DocGia_Tam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="char" MaxLength="50" />
+          <Property Name="SDT" Type="char" MaxLength="12" />
+          <Property Name="CMND" Type="char" MaxLength="12" />
+          <Property Name="MSSV" Type="char" MaxLength="8" />
+          <Property Name="Khoa" Type="nvarchar" MaxLength="50" />
+          <Property Name="NgaySinh" Type="datetime" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
+          <Property Name="NgayCapNhat" Type="datetime" />
+          <Property Name="NgayHetHan" Type="datetime" />
+          <Property Name="User" Type="char" Nullable="false" MaxLength="10" />
+          <Property Name="Pass" Type="char" Nullable="false" MaxLength="10" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ThuVien_TrailModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="QLThuVienEntities1" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_DocGia" EntityType="ThuVien_TrailModel.tbl_DocGia" />
+          <EntitySet Name="tbl_DocGia_Tam" EntityType="ThuVien_TrailModel.tbl_DocGia_Tam" />
+        </EntityContainer>
+        <EntityType Name="tbl_DocGia">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="true" />
+          <Property Name="Ten" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="SDT" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+          <Property Name="CMND" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+          <Property Name="MSSV" Type="String" MaxLength="8" Unicode="false" FixedLength="true" />
+          <Property Name="Khoa" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+          <Property Name="GioiTinh" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="NgayCapNhat" Type="DateTime" Precision="3" />
+          <Property Name="NgayHetHan" Type="DateTime" Precision="3" />
+          <Property Name="User" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="Pass" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="tbl_DocGia_Tam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Ten" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="SDT" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+          <Property Name="CMND" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+          <Property Name="MSSV" Type="String" MaxLength="8" Unicode="false" FixedLength="true" />
+          <Property Name="Khoa" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+          <Property Name="GioiTinh" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="NgayCapNhat" Type="DateTime" Precision="3" />
+          <Property Name="NgayHetHan" Type="DateTime" Precision="3" />
+          <Property Name="User" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="Pass" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ThuVien_TrailModelStoreContainer" CdmEntityContainer="QLThuVienEntities1">
+          <EntitySetMapping Name="tbl_DocGia">
+            <EntityTypeMapping TypeName="ThuVien_TrailModel.tbl_DocGia">
+              <MappingFragment StoreEntitySet="tbl_DocGia">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="MSSV" ColumnName="MSSV" />
+                <ScalarProperty Name="Khoa" ColumnName="Khoa" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="NgayCapNhat" ColumnName="NgayCapNhat" />
+                <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
+                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="Pass" ColumnName="Pass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_DocGia_Tam">
+            <EntityTypeMapping TypeName="ThuVien_TrailModel.tbl_DocGia_Tam">
+              <MappingFragment StoreEntitySet="tbl_DocGia_Tam">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="MSSV" ColumnName="MSSV" />
+                <ScalarProperty Name="Khoa" ColumnName="Khoa" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="NgayCapNhat" ColumnName="NgayCapNhat" />
+                <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
+                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="Pass" ColumnName="Pass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

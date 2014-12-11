@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "main";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>quan ly doc gia</h2>
+<div id="content_trai">
+    <ul>
+        
+   
+<li>
+    @Ajax.ActionLink("Xemthongtinmuon", "giahan", "HoTroDocGia",new {id="-1"}, new AjaxOptions
+       {
+           HttpMethod = "POST",
+           InsertionMode = InsertionMode.Replace,
+           UpdateTargetId = "content_phai"
+       })
+
+</li>
+</ul>
+</div>
+<div id="content_phai">
+    <h2>trang danh cho  doc gia</h2>
+
+</div>
+<div id="loading" style="display: none;">
+    loading...
+</div>

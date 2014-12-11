@@ -1,0 +1,170 @@
+﻿/*
+Credit: http://www.tooplate.com
+*/
+
+
+#all_page{
+    height: 1000px;
+    border-color:black;
+    border-style: double;
+}
+
+#all_page #header{
+    width: 100%;
+    height: 12%;
+    margin:0px;
+}
+#header #header_school{
+   width: 35%;
+   height: 100%;
+   float: left;
+   font-size: xx-large;
+   padding: 1%;
+}
+
+#header #header_menu{
+    width: auto;
+    float: left;
+   padding-left: 1%;
+}
+#header #header_phai {
+    float:left;
+    width:10%;
+}
+/*tao menu tren*/
+#header_menu_tren ul{
+list-style: none;
+font-family: Arial, san-serif;
+font-size: 12px;
+padding: 0;
+}
+ 
+#header_menu_tren ul li{
+float:left;
+position:relative;
+
+}
+ 
+#header_menu_tren ul a{
+text-decoration:none;
+color:#fff;
+display:block;
+font-weight:bold;
+padding:10px 40px 10px 40px;
+background:#000;
+}
+ 
+#header_menu_tren ul a:hover{
+background:#555;
+}
+ /*menu cap 2*/
+#header_menu_tren li ul a{
+background:#444;
+}
+ 
+#header_menu_tren li ul{
+position:absolute;
+display:none;
+width:auto;
+}
+ 
+#header_menu_tren li:hover ul{
+display:block;
+}
+
+
+/*tao menu duoi*/
+#header_menu_duoi ul{
+list-style: none;
+font-family: Arial, san-serif;
+font-size: 13px;
+padding: 0;
+}
+ 
+#header_menu_duoi ul li{
+float:left;
+position:relative;
+}
+ 
+#header_menu_duoi ul a{
+text-decoration:none;
+color:#fff;
+display:block;
+font-weight:bold;
+padding:10px 40px 10px 40px;
+background:#000;
+}
+ 
+#header_menu_duoi ul a:hover{
+background:#555;
+}
+
+/*banner trong web*/
+#banner{
+    width:auto; 
+    height:30%; 
+    background-image:url('../images/website/image_u4.jpg'); 
+    background-position:inherit;
+    margin:0px;
+}
+/* body cua web*/
+#content{
+    height:50%;
+    width:100%;
+    
+    margin:0px;
+}
+#content_trai {
+
+    width: 20%;
+    height:100%;
+    background-color:#533460;
+    float:left;
+}
+#content_phai {
+    width:80%;
+    height:100%;
+    background-color: #dff699;
+    float:left;
+}
+
+/*menu doc trong content*/
+#content_trai{
+width:20%;
+}
+#content_trai h1{
+background:#99CC00;
+color:#FFFFFF;
+font-size:14px;
+text-align:center;
+}
+#content_trai ul{
+list-style-type:none;
+margin:0px;
+padding:0px;
+}
+#content_trai ul a{
+text-decoration:none;
+line-height:25px;
+color:#333333;
+background:#EEEEEE;
+display:block;
+width:100%;
+text-align: center;
+border-top:1px solid #FFFFFF;
+border-bottom:1px solid #CCCCCC;
+padding-left:15px;
+}
+#content_trai ul a:hover{
+background:#FFCC99;
+}
+#tk_dg_khoa{
+    border: double;
+    border-color:azure;
+    background-color:yellow;
+}
+#tk_dg_nam {
+    border: double;
+    border-color:azure;
+    background-color:yellow;
+}

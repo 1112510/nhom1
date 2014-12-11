@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ThuVien_TrailModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ThuVien_TrailModelStoreContainer">
+    <EntitySet Name="tbl_DocGia" EntityType="ThuVien_TrailModel.Store.tbl_DocGia" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_DocGia_Tam" EntityType="ThuVien_TrailModel.Store.tbl_DocGia_Tam" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tbl_DocGia">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="char" MaxLength="50" />
+    <Property Name="SDT" Type="char" MaxLength="12" />
+    <Property Name="CMND" Type="char" MaxLength="12" />
+    <Property Name="MSSV" Type="char" MaxLength="8" />
+    <Property Name="Khoa" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="datetime" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
+    <Property Name="NgayCapNhat" Type="datetime" />
+    <Property Name="NgayHetHan" Type="datetime" />
+    <Property Name="User" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="Pass" Type="char" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="tbl_DocGia_Tam">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="char" MaxLength="50" />
+    <Property Name="SDT" Type="char" MaxLength="12" />
+    <Property Name="CMND" Type="char" MaxLength="12" />
+    <Property Name="MSSV" Type="char" MaxLength="8" />
+    <Property Name="Khoa" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="datetime" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
+    <Property Name="NgayCapNhat" Type="datetime" />
+    <Property Name="NgayHetHan" Type="datetime" />
+    <Property Name="User" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="Pass" Type="char" Nullable="false" MaxLength="10" />
+  </EntityType>
+</Schema>

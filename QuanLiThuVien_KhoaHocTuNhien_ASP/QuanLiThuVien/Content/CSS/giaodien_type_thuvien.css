@@ -1,0 +1,62 @@
+﻿
+/* body cua web*/
+#content{
+    height:50%;
+    width:100%;
+    margin:0px;
+    overflow: auto;
+    word-wrap: break-word;
+}
+#content_trai {
+
+    width: 20%;
+    height:auto;
+    /*background-color:#533460;*/
+    float:left;
+}
+#content_phai {
+    width:80%;
+    height:auto;
+    background-color: #dff699;
+    float:left;
+    overflow: auto;
+    word-wrap: break-word;
+}
+/*menu doc trong content*/
+
+#content_trai h1{
+background:#99CC00;
+color:#FFFFFF;
+font-size:14px;
+text-align:center;
+}
+#content_trai ul{
+list-style-type:none;
+margin:0px;
+padding:0px;
+}
+#content_trai ul a{
+text-decoration:none;
+line-height:25px;
+color:#333333;
+background:#EEEEEE;
+display:block;
+width:100%;
+text-align: center;
+border-top:1px solid #FFFFFF;
+border-bottom:1px solid #CCCCCC;
+padding-left:15px;
+}
+#content_trai ul a:hover{
+background:#FFCC99;
+}
+#tk_dg_khoa{
+    border: double;
+    border-color:azure;
+    background-color:yellow;
+}
+#tk_dg_nam {
+    border: double;
+    border-color:azure;
+    background-color:yellow;
+}

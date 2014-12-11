@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ThuVien_TrailModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QLThuVienEntities1" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_DocGia" EntityType="ThuVien_TrailModel.tbl_DocGia" />
+    <EntitySet Name="tbl_DocGia_Tam" EntityType="ThuVien_TrailModel.tbl_DocGia_Tam" />
+  </EntityContainer>
+  <EntityType Name="tbl_DocGia">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="true" />
+    <Property Name="Ten" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="SDT" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+    <Property Name="CMND" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+    <Property Name="MSSV" Type="String" MaxLength="8" Unicode="false" FixedLength="true" />
+    <Property Name="Khoa" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+    <Property Name="GioiTinh" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="NgayCapNhat" Type="DateTime" Precision="3" />
+    <Property Name="NgayHetHan" Type="DateTime" Precision="3" />
+    <Property Name="User" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="Pass" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="tbl_DocGia_Tam">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Ten" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="SDT" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+    <Property Name="CMND" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+    <Property Name="MSSV" Type="String" MaxLength="8" Unicode="false" FixedLength="true" />
+    <Property Name="Khoa" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+    <Property Name="GioiTinh" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="NgayCapNhat" Type="DateTime" Precision="3" />
+    <Property Name="NgayHetHan" Type="DateTime" Precision="3" />
+    <Property Name="User" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="Pass" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+  </EntityType>
+</Schema>

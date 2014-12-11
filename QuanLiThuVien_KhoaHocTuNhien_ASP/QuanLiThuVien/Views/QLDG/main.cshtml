@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "main";
+    Layout = "~/Views/Shared/_Layout_Staff.cshtml";
+}
+<h2>quan ly doc gia</h2>
+<div id="content_trai">
+    <ul>
+        <li>@Ajax.ActionLink("Phát Sinh Barcode","PhatSinh","QLDG",new AjaxOptions{
+        HttpMethod="POST",
+        InsertionMode= InsertionMode.Replace,
+        UpdateTargetId="content_phai"})
+                          
+        </li>
+        <li>@Ajax.ActionLink("Thống Kê Theo Khoa","TK_DG_Khoa","QLDG",new AjaxOptions{
+        HttpMethod="POST",
+        InsertionMode= InsertionMode.Replace,
+        UpdateTargetId="content_phai"})</li>
+        <li>
+            @Ajax.ActionLink("Thống Kê Theo Năm","TK_DG_Nam","QLDG",new AjaxOptions{
+                HttpMethod="POST",
+                InsertionMode= InsertionMode.Replace,
+                UpdateTargetId="content_phai"})               
+        </li>
+        <li>@Ajax.ActionLink("Danh sach doc gia","DS_DocGia","QLDG",new AjaxOptions{
+                HttpMethod="POST",
+                InsertionMode= InsertionMode.Replace,
+                UpdateTargetId="content_phai"}) 
+
+        </li>
+    </ul>
+</div>
+<div id="content_phai">
+    <h2>trang danh cho Nhan Vien quan ly doc gia</h2>
+   
+</div>
+<div id="loading" style="display: none;">
+    loading...
+</div>

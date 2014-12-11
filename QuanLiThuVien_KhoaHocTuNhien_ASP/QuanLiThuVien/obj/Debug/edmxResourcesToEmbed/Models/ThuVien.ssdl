@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLThuVienModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_DocGia">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="char" MaxLength="50" />
+    <Property Name="SDT" Type="char" MaxLength="12" />
+    <Property Name="CMND" Type="char" MaxLength="12" />
+    <Property Name="MSSV" Type="char" MaxLength="8" />
+    <Property Name="Khoa" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="datetime" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
+    <Property Name="NgayCapNhat" Type="datetime" />
+    <Property Name="NgayHetHan" Type="datetime" />
+    <Property Name="User" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Pass" Type="char" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_DocGia_Tam">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="char" MaxLength="50" />
+    <Property Name="SDT" Type="char" MaxLength="12" />
+    <Property Name="CMND" Type="char" MaxLength="12" />
+    <Property Name="MSSV" Type="char" MaxLength="8" />
+    <Property Name="Khoa" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="datetime" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
+    <Property Name="NgayCapNhat" Type="datetime" />
+    <Property Name="NgayHetHan" Type="datetime" />
+    <Property Name="User" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Pass" Type="char" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="QLThuVienModelStoreContainer">
+    <EntitySet Name="tbl_DocGia" EntityType="Self.tbl_DocGia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_DocGia_Tam" EntityType="Self.tbl_DocGia_Tam" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

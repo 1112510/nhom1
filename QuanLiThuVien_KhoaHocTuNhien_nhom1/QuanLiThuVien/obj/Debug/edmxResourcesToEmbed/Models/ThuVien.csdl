@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLThuVienModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_DocGia">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="SDT" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="CMND" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="MSSV" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="Khoa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+    <Property Name="GioiTinh" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="NgayCapNhat" Type="DateTime" Precision="3" />
+    <Property Name="NgayHetHan" Type="DateTime" Precision="3" />
+    <Property Name="User" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Pass" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_DocGia_Tam">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="SDT" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="CMND" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="MSSV" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="Khoa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+    <Property Name="GioiTinh" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="NgayCapNhat" Type="DateTime" Precision="3" />
+    <Property Name="NgayHetHan" Type="DateTime" Precision="3" />
+    <Property Name="User" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Pass" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="QLThuVienEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_DocGia" EntityType="Self.tbl_DocGia" />
+    <EntitySet Name="tbl_DocGia_Tam" EntityType="Self.tbl_DocGia_Tam" />
+  </EntityContainer>
+</Schema>

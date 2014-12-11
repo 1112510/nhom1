@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ThuVien_TrailModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ThuVien_TrailModelStoreContainer">
+    <EntitySet Name="Answer" EntityType="ThuVien_TrailModel.Store.Answer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="phieumuon" EntityType="ThuVien_TrailModel.Store.phieumuon" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Question" EntityType="ThuVien_TrailModel.Store.Question" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sach" EntityType="ThuVien_TrailModel.Store.Sach" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_DocGia" EntityType="ThuVien_TrailModel.Store.tbl_DocGia" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_DocGia_Tam" EntityType="ThuVien_TrailModel.Store.tbl_DocGia_Tam" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_LoaiNV" EntityType="ThuVien_TrailModel.Store.tbl_LoaiNV" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_NhanVien" EntityType="ThuVien_TrailModel.Store.tbl_NhanVien" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Answer_Question" Association="ThuVien_TrailModel.Store.FK_Answer_Question">
+      <End Role="Question" EntitySet="Question" />
+      <End Role="Answer" EntitySet="Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_phieumuon_docgia" Association="ThuVien_TrailModel.Store.FK_phieumuon_docgia">
+      <End Role="tbl_DocGia" EntitySet="tbl_DocGia" />
+      <End Role="phieumuon" EntitySet="phieumuon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_phieumuon_sach" Association="ThuVien_TrailModel.Store.FK_phieumuon_sach">
+      <End Role="Sach" EntitySet="Sach" />
+      <End Role="phieumuon" EntitySet="phieumuon" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Answer">
+    <Key>
+      <PropertyRef Name="ID_a" />
+    </Key>
+    <Property Name="ID_a" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Answer" Type="nvarchar" MaxLength="60" />
+    <Property Name="Answer_choice" Type="bit" />
+    <Property Name="ID_q" Type="int" />
+  </EntityType>
+  <EntityType Name="phieumuon">
+    <Key>
+      <PropertyRef Name="IDdocgia" />
+      <PropertyRef Name="IDsach" />
+      <PropertyRef Name="Ngaymuon" />
+    </Key>
+    <Property Name="IDdocgia" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="IDsach" Type="int" Nullable="false" />
+    <Property Name="Ngaymuon" Type="datetime" Nullable="false" />
+    <Property Name="Ngayhethan" Type="datetime" />
+    <Property Name="Ngaytra" Type="datetime" />
+    <Property Name="SolanGH" Type="int" />
+    <Property Name="Ghichu" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="ID_q" />
+    </Key>
+    <Property Name="ID_q" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Questiontext" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Sach">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Tensach" Type="nvarchar" MaxLength="40" />
+    <Property Name="Theloai" Type="nvarchar" MaxLength="20" />
+    <Property Name="Tacgia" Type="nvarchar" MaxLength="50" />
+    <Property Name="NXB" Type="nvarchar" MaxLength="20" />
+    <Property Name="Namsx" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_DocGia">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="char" Nullable="false" MaxLength="8" />
+    <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="char" MaxLength="50" />
+    <Property Name="SDT" Type="char" MaxLength="12" />
+    <Property Name="CMND" Type="char" MaxLength="12" />
+    <Property Name="MSSV" Type="char" MaxLength="8" />
+    <Property Name="Khoa" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="datetime" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
+    <Property Name="NgayCapNhat" Type="datetime" />
+    <Property Name="NgayHetHan" Type="datetime" />
+    <Property Name="User" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="Pass" Type="char" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="tbl_DocGia_Tam">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="char" MaxLength="50" />
+    <Property Name="SDT" Type="char" MaxLength="12" />
+    <Property Name="CMND" Type="char" MaxLength="12" />
+    <Property Name="MSSV" Type="char" MaxLength="8" />
+    <Property Name="Khoa" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="datetime" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
+    <Property Name="NgayCapNhat" Type="datetime" />
+    <Property Name="NgayHetHan" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_LoaiNV">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoai" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_NhanVien">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+    <Property Name="SDT" Type="char" MaxLength="12" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="LoaiNV" Type="int" Nullable="false" />
+    <Property Name="Luong" Type="float" />
+    <Property Name="Password" Type="char" MaxLength="10" />
+    <Property Name="CapBac" Type="nvarchar" MaxLength="50" />
+    <Property Name="User" Type="char" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_Answer_Question">
+    <End Role="Question" Type="ThuVien_TrailModel.Store.Question" Multiplicity="0..1" />
+    <End Role="Answer" Type="ThuVien_TrailModel.Store.Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="ID_q" />
+      </Principal>
+      <Dependent Role="Answer">
+        <PropertyRef Name="ID_q" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_phieumuon_docgia">
+    <End Role="tbl_DocGia" Type="ThuVien_TrailModel.Store.tbl_DocGia" Multiplicity="1" />
+    <End Role="phieumuon" Type="ThuVien_TrailModel.Store.phieumuon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_DocGia">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="phieumuon">
+        <PropertyRef Name="IDdocgia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_phieumuon_sach">
+    <End Role="Sach" Type="ThuVien_TrailModel.Store.Sach" Multiplicity="1" />
+    <End Role="phieumuon" Type="ThuVien_TrailModel.Store.phieumuon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sach">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="phieumuon">
+        <PropertyRef Name="IDsach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="sp_Giahan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idsach" Type="int" Mode="In" />
+  </Function>
+</Schema>

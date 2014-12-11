@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ThuVien_TrailModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ThuVien_TrailModelStoreContainer">
+          <EntitySet Name="Answer" EntityType="ThuVien_TrailModel.Store.Answer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="phieumuon" EntityType="ThuVien_TrailModel.Store.phieumuon" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Question" EntityType="ThuVien_TrailModel.Store.Question" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sach" EntityType="ThuVien_TrailModel.Store.Sach" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_DocGia" EntityType="ThuVien_TrailModel.Store.tbl_DocGia" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_DocGia_Tam" EntityType="ThuVien_TrailModel.Store.tbl_DocGia_Tam" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_LoaiNV" EntityType="ThuVien_TrailModel.Store.tbl_LoaiNV" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_NhanVien" EntityType="ThuVien_TrailModel.Store.tbl_NhanVien" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Answer_Question" Association="ThuVien_TrailModel.Store.FK_Answer_Question">
+            <End Role="Question" EntitySet="Question" />
+            <End Role="Answer" EntitySet="Answer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_phieumuon_docgia" Association="ThuVien_TrailModel.Store.FK_phieumuon_docgia">
+            <End Role="tbl_DocGia" EntitySet="tbl_DocGia" />
+            <End Role="phieumuon" EntitySet="phieumuon" />
+          </AssociationSet>
+          <AssociationSet Name="FK_phieumuon_sach" Association="ThuVien_TrailModel.Store.FK_phieumuon_sach">
+            <End Role="Sach" EntitySet="Sach" />
+            <End Role="phieumuon" EntitySet="phieumuon" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Answer">
+          <Key>
+            <PropertyRef Name="ID_a" />
+          </Key>
+          <Property Name="ID_a" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Answer" Type="nvarchar" MaxLength="60" />
+          <Property Name="Answer_choice" Type="bit" />
+          <Property Name="ID_q" Type="int" />
+        </EntityType>
+        <EntityType Name="phieumuon">
+          <Key>
+            <PropertyRef Name="IDdocgia" />
+            <PropertyRef Name="IDsach" />
+            <PropertyRef Name="Ngaymuon" />
+          </Key>
+          <Property Name="IDdocgia" Type="char" Nullable="false" MaxLength="8" />
+          <Property Name="IDsach" Type="int" Nullable="false" />
+          <Property Name="Ngaymuon" Type="datetime" Nullable="false" />
+          <Property Name="Ngayhethan" Type="datetime" />
+          <Property Name="Ngaytra" Type="datetime" />
+          <Property Name="SolanGH" Type="int" />
+          <Property Name="Ghichu" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="ID_q" />
+          </Key>
+          <Property Name="ID_q" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Questiontext" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Sach">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Tensach" Type="nvarchar" MaxLength="40" />
+          <Property Name="Theloai" Type="nvarchar" MaxLength="20" />
+          <Property Name="Tacgia" Type="nvarchar" MaxLength="50" />
+          <Property Name="NXB" Type="nvarchar" MaxLength="20" />
+          <Property Name="Namsx" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_DocGia">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="char" Nullable="false" MaxLength="8" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="char" MaxLength="50" />
+          <Property Name="SDT" Type="char" MaxLength="12" />
+          <Property Name="CMND" Type="char" MaxLength="12" />
+          <Property Name="MSSV" Type="char" MaxLength="8" />
+          <Property Name="Khoa" Type="nvarchar" MaxLength="50" />
+          <Property Name="NgaySinh" Type="datetime" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
+          <Property Name="NgayCapNhat" Type="datetime" />
+          <Property Name="NgayHetHan" Type="datetime" />
+          <Property Name="User" Type="char" Nullable="false" MaxLength="10" />
+          <Property Name="Pass" Type="char" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tbl_DocGia_Tam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="char" MaxLength="50" />
+          <Property Name="SDT" Type="char" MaxLength="12" />
+          <Property Name="CMND" Type="char" MaxLength="12" />
+          <Property Name="MSSV" Type="char" MaxLength="8" />
+          <Property Name="Khoa" Type="nvarchar" MaxLength="50" />
+          <Property Name="NgaySinh" Type="datetime" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
+          <Property Name="NgayCapNhat" Type="datetime" />
+          <Property Name="NgayHetHan" Type="datetime" />
+          <Property Name="Pass" Type="char" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tbl_LoaiNV">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoai" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_NhanVien">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="char" Nullable="false" MaxLength="10" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+          <Property Name="SDT" Type="char" MaxLength="12" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="LoaiNV" Type="int" Nullable="false" />
+          <Property Name="Luong" Type="float" />
+          <Property Name="Password" Type="char" MaxLength="10" />
+          <Property Name="CapBac" Type="nvarchar" MaxLength="50" />
+          <Property Name="User" Type="char" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK_Answer_Question">
+          <End Role="Question" Type="ThuVien_TrailModel.Store.Question" Multiplicity="0..1" />
+          <End Role="Answer" Type="ThuVien_TrailModel.Store.Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="ID_q" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="ID_q" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_phieumuon_docgia">
+          <End Role="tbl_DocGia" Type="ThuVien_TrailModel.Store.tbl_DocGia" Multiplicity="1" />
+          <End Role="phieumuon" Type="ThuVien_TrailModel.Store.phieumuon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_DocGia">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="phieumuon">
+              <PropertyRef Name="IDdocgia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_phieumuon_sach">
+          <End Role="Sach" Type="ThuVien_TrailModel.Store.Sach" Multiplicity="1" />
+          <End Role="phieumuon" Type="ThuVien_TrailModel.Store.phieumuon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sach">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="phieumuon">
+              <PropertyRef Name="IDsach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="sp_Giahan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idsach" Type="int" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ThuVien_TrailModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="QLThuVienEntities5" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Answers" EntityType="ThuVien_TrailModel.Answer" />
+          <EntitySet Name="phieumuons" EntityType="ThuVien_TrailModel.phieumuon" />
+          <EntitySet Name="Questions" EntityType="ThuVien_TrailModel.Question" />
+          <EntitySet Name="Saches" EntityType="ThuVien_TrailModel.Sach" />
+          <EntitySet Name="tbl_DocGia" EntityType="ThuVien_TrailModel.tbl_DocGia" />
+          <EntitySet Name="tbl_DocGia_Tam" EntityType="ThuVien_TrailModel.tbl_DocGia_Tam" />
+          <EntitySet Name="tbl_LoaiNV" EntityType="ThuVien_TrailModel.tbl_LoaiNV" />
+          <EntitySet Name="tbl_NhanVien" EntityType="ThuVien_TrailModel.tbl_NhanVien" />
+          <AssociationSet Name="FK_Answer_Question" Association="ThuVien_TrailModel.FK_Answer_Question">
+            <End Role="Question" EntitySet="Questions" />
+            <End Role="Answer" EntitySet="Answers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_phieumuon_docgia" Association="ThuVien_TrailModel.FK_phieumuon_docgia">
+            <End Role="tbl_DocGia" EntitySet="tbl_DocGia" />
+            <End Role="phieumuon" EntitySet="phieumuons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_phieumuon_sach" Association="ThuVien_TrailModel.FK_phieumuon_sach">
+            <End Role="Sach" EntitySet="Saches" />
+            <End Role="phieumuon" EntitySet="phieumuons" />
+          </AssociationSet>
+          <FunctionImport Name="sp_Giahan">
+            <Parameter Name="idsach" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="Answer">
+          <Key>
+            <PropertyRef Name="ID_a" />
+          </Key>
+          <Property Name="ID_a" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Answer1" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+          <Property Name="Answer_choice" Type="Boolean" />
+          <Property Name="ID_q" Type="Int32" />
+          <NavigationProperty Name="Question" Relationship="ThuVien_TrailModel.FK_Answer_Question" FromRole="Answer" ToRole="Question" />
+        </EntityType>
+        <EntityType Name="phieumuon">
+          <Key>
+            <PropertyRef Name="IDdocgia" />
+            <PropertyRef Name="IDsach" />
+            <PropertyRef Name="Ngaymuon" />
+          </Key>
+          <Property Name="IDdocgia" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="true" />
+          <Property Name="IDsach" Type="Int32" Nullable="false" />
+          <Property Name="Ngaymuon" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Ngayhethan" Type="DateTime" Precision="3" />
+          <Property Name="Ngaytra" Type="DateTime" Precision="3" />
+          <Property Name="SolanGH" Type="Int32" />
+          <Property Name="Ghichu" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tbl_DocGia" Relationship="ThuVien_TrailModel.FK_phieumuon_docgia" FromRole="phieumuon" ToRole="tbl_DocGia" />
+          <NavigationProperty Name="Sach" Relationship="ThuVien_TrailModel.FK_phieumuon_sach" FromRole="phieumuon" ToRole="Sach" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="ID_q" />
+          </Key>
+          <Property Name="ID_q" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Questiontext" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Answers" Relationship="ThuVien_TrailModel.FK_Answer_Question" FromRole="Question" ToRole="Answer" />
+        </EntityType>
+        <EntityType Name="Sach">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Tensach" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="Theloai" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Tacgia" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NXB" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Namsx" Type="Int32" />
+          <NavigationProperty Name="phieumuons" Relationship="ThuVien_TrailModel.FK_phieumuon_sach" FromRole="Sach" ToRole="phieumuon" />
+        </EntityType>
+        <EntityType Name="tbl_DocGia">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="true" />
+          <Property Name="Ten" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="SDT" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+          <Property Name="CMND" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+          <Property Name="MSSV" Type="String" MaxLength="8" Unicode="false" FixedLength="true" />
+          <Property Name="Khoa" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+          <Property Name="GioiTinh" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="NgayCapNhat" Type="DateTime" Precision="3" />
+          <Property Name="NgayHetHan" Type="DateTime" Precision="3" />
+          <Property Name="User" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="Pass" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="phieumuons" Relationship="ThuVien_TrailModel.FK_phieumuon_docgia" FromRole="tbl_DocGia" ToRole="phieumuon" />
+        </EntityType>
+        <EntityType Name="tbl_DocGia_Tam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Ten" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="SDT" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+          <Property Name="CMND" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+          <Property Name="MSSV" Type="String" MaxLength="8" Unicode="false" FixedLength="true" />
+          <Property Name="Khoa" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+          <Property Name="GioiTinh" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="NgayCapNhat" Type="DateTime" Precision="3" />
+          <Property Name="NgayHetHan" Type="DateTime" Precision="3" />
+          <Property Name="Pass" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="tbl_LoaiNV">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoai" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbl_NhanVien">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="Ten" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SDT" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LoaiNV" Type="Int32" Nullable="false" />
+          <Property Name="Luong" Type="Double" />
+          <Property Name="Password" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="CapBac" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="User" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <Association Name="FK_Answer_Question">
+          <End Role="Question" Type="ThuVien_TrailModel.Question" Multiplicity="0..1" />
+          <End Role="Answer" Type="ThuVien_TrailModel.Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="ID_q" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="ID_q" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_phieumuon_docgia">
+          <End Role="tbl_DocGia" Type="ThuVien_TrailModel.tbl_DocGia" Multiplicity="1" />
+          <End Role="phieumuon" Type="ThuVien_TrailModel.phieumuon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_DocGia">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="phieumuon">
+              <PropertyRef Name="IDdocgia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_phieumuon_sach">
+          <End Role="Sach" Type="ThuVien_TrailModel.Sach" Multiplicity="1" />
+          <End Role="phieumuon" Type="ThuVien_TrailModel.phieumuon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sach">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="phieumuon">
+              <PropertyRef Name="IDsach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ThuVien_TrailModelStoreContainer" CdmEntityContainer="QLThuVienEntities5">
+          <EntitySetMapping Name="Answers">
+            <EntityTypeMapping TypeName="ThuVien_TrailModel.Answer">
+              <MappingFragment StoreEntitySet="Answer">
+                <ScalarProperty Name="ID_a" ColumnName="ID_a" />
+                <ScalarProperty Name="Answer1" ColumnName="Answer" />
+                <ScalarProperty Name="Answer_choice" ColumnName="Answer_choice" />
+                <ScalarProperty Name="ID_q" ColumnName="ID_q" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="phieumuons">
+            <EntityTypeMapping TypeName="ThuVien_TrailModel.phieumuon">
+              <MappingFragment StoreEntitySet="phieumuon">
+                <ScalarProperty Name="IDdocgia" ColumnName="IDdocgia" />
+                <ScalarProperty Name="IDsach" ColumnName="IDsach" />
+                <ScalarProperty Name="Ngaymuon" ColumnName="Ngaymuon" />
+                <ScalarProperty Name="Ngayhethan" ColumnName="Ngayhethan" />
+                <ScalarProperty Name="Ngaytra" ColumnName="Ngaytra" />
+                <ScalarProperty Name="SolanGH" ColumnName="SolanGH" />
+                <ScalarProperty Name="Ghichu" ColumnName="Ghichu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="ThuVien_TrailModel.Question">
+              <MappingFragment StoreEntitySet="Question">
+                <ScalarProperty Name="ID_q" ColumnName="ID_q" />
+                <ScalarProperty Name="Questiontext" ColumnName="Questiontext" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Saches">
+            <EntityTypeMapping TypeName="ThuVien_TrailModel.Sach">
+              <MappingFragment StoreEntitySet="Sach">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Tensach" ColumnName="Tensach" />
+                <ScalarProperty Name="Theloai" ColumnName="Theloai" />
+                <ScalarProperty Name="Tacgia" ColumnName="Tacgia" />
+                <ScalarProperty Name="NXB" ColumnName="NXB" />
+                <ScalarProperty Name="Namsx" ColumnName="Namsx" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_DocGia">
+            <EntityTypeMapping TypeName="ThuVien_TrailModel.tbl_DocGia">
+              <MappingFragment StoreEntitySet="tbl_DocGia">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="MSSV" ColumnName="MSSV" />
+                <ScalarProperty Name="Khoa" ColumnName="Khoa" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="NgayCapNhat" ColumnName="NgayCapNhat" />
+                <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
+                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="Pass" ColumnName="Pass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_DocGia_Tam">
+            <EntityTypeMapping TypeName="ThuVien_TrailModel.tbl_DocGia_Tam">
+              <MappingFragment StoreEntitySet="tbl_DocGia_Tam">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="MSSV" ColumnName="MSSV" />
+                <ScalarProperty Name="Khoa" ColumnName="Khoa" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="NgayCapNhat" ColumnName="NgayCapNhat" />
+                <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
+                <ScalarProperty Name="Pass" ColumnName="Pass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_LoaiNV">
+            <EntityTypeMapping TypeName="ThuVien_TrailModel.tbl_LoaiNV">
+              <MappingFragment StoreEntitySet="tbl_LoaiNV">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_NhanVien">
+            <EntityTypeMapping TypeName="ThuVien_TrailModel.tbl_NhanVien">
+              <MappingFragment StoreEntitySet="tbl_NhanVien">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LoaiNV" ColumnName="LoaiNV" />
+                <ScalarProperty Name="Luong" ColumnName="Luong" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="CapBac" ColumnName="CapBac" />
+                <ScalarProperty Name="User" ColumnName="User" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_Giahan" FunctionName="ThuVien_TrailModel.Store.sp_Giahan" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

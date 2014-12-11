@@ -1,0 +1,123 @@
+﻿@model IEnumerable<QuanLiThuVien.Models.tbl_DocGia_Tam>
+    <h2>PhatSinh Barcode Ma So The</h2>
+<script type="text/javascript">
+   /* $(document).ready(function () {
+        $("#btn_PhatSinh").on("click", function () {
+            var t = { id: $(this).siblings("#id1").val() };
+            var kt = true;
+            $.ajax({
+                type: "POST",
+                url: "/home/Barcode_MaSoThe",
+                data: t,
+                success: function () {
+                    alert("da them thanh cong");
+                    //$(this).parent().parent().remove();
+                    //location.reload();
+                },
+                error: function () {
+                    kt = false;
+                    alert("co loi");
+                }
+            });
+            if (kt) {
+                //alert("ok");
+                $(this).parent().parent().remove();
+            }
+        });
+    });*/
+</script>
+@if(Model!=null)
+{
+    <table border="1" style="background-color: white;" >
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ten)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiaChi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SDT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khoa)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.NgayCapNhat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayHetHan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pass)
+            </th>
+            <th>--||--</th>
+
+            
+        </tr>
+        
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ten)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SDT)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Khoa)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayCapNhat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayHetHan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pass)
+                </td>
+                <td>
+                    <input type="hidden" value="@item.CMND.ToString()" id="id1" />
+                    @Ajax.ActionLink("Phat sinh","Barcode_MaSoThe","QLDG",
+                                        new RouteValueDictionary{{"id",@item.ID.ToString()}} ,
+                                        new AjaxOptions
+                                        {
+                                            HttpMethod="POST",
+                                            InsertionMode=InsertionMode.Replace,
+                                            UpdateTargetId= "content_phai",
+                                            OnBegin= "Hide",
+                                            OnComplete="Show",
+                                            LoadingElementId="loading"
+                                        })
+                </td>                
+            </tr>
+        }
+        
+    </table>
+}else{
+    <span>khong co du lieu</span>
+}
+<script type="text/javascript">
+    function Hide()
+    {
+        $("#content_phai").hide();
+    }
+    function Show()
+    {
+        $("#content_phai").show();
+    }
+</script>
+

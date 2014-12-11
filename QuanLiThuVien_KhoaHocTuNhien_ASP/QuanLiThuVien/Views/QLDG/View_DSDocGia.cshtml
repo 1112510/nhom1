@@ -1,0 +1,81 @@
+﻿@model IEnumerable<QuanLiThuVien.Models.tbl_DocGia>
+
+@{
+    ViewBag.Title = "View_DSDocGia";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        // setup the dialog
+        /*$("#the").dialog({
+            modal: true,
+            autoOpen: false,
+            height: 100,
+            width: 200
+        });*/
+       
+        // bind the click event
+        /*$("#ClickMe").on("click", function (event) {
+            alert("ok");
+            event.preventDefault();
+            
+            $(this).after().first().dialog("open");  // show dialog
+        });*/
+    });
+</script>
+
+    <table border="1" style="width:100%">
+        <caption>Thông Tin Đọc Giả</caption>
+        <tr>
+            <th>Hinh Anh</th>
+            <th>Ten</th>
+            <th>Dia Chi</th>
+            <th>Email</th>
+            <th>SDT</th>
+            <th>Khoa</th>
+            <th>Ngay Cap Nhat</th>
+            <th> Ngay Het Han</th>
+            <th></th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>
+                    <img width="100" height="120" src="@Url.Content("~/content/images/docgia/"+@item.ID+".png" )" />     
+                </td>
+                <td>@item.Ten</td>
+                <td>@item.DiaChi</td>
+                <td>@item.Email</td>
+                <td>@item.SDT</td>
+                <td>@item.Khoa</td>
+                <td>@item.NgayCapNhat</td>
+                <td>@item.NgayHetHan</td>
+                <td>
+                    <input type="hidden" value="@item.ID" id="idCard" />
+                    <input type="button" name="@item.ID" onclick="PopUpCard(this.name.toString());" Value="In"  />
+                </td>
+            </tr>
+        
+        }
+    </table>
+<script type="text/javascript">
+    function PopUpCard(t)   //chua truyen duoc bien t
+    {
+        var id = new String();
+        id = t;
+        window.showModalDialog("/QLDG/InThe?id="+id, id, "dialogHeight:300px; dialogWidth:400px;");
+    }
+</script>

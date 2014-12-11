@@ -1,0 +1,59 @@
+﻿@{ 
+    @model QuanLiThuVien.Models.EditInfo_i
+}
+<script type="text/javascript">
+    function thanhCong()
+    {
+        alert("cap nhat thanh cong");
+    }
+    function kiemTraNewPass()
+    {
+        var t = document.getElementById("newPass").value.toString().trim();
+        var t1 = document.getElementById("newPass1").value.toString().trim();
+        if (t.localeCompare(t1)==0)
+        {
+            return true;
+        }
+        alert("pass moi khong trung nhau");
+        return false;
+    }
+    function kiemTraOldPass()
+    {
+        var t = document.getElementById("pass1").value.toString().trim();
+        var m = '@Model.pass'.toString().trim();
+        if (t.localeCompare(m)==0)
+        {
+            return true;
+        }
+        alert("password khong dung");
+        return false;
+    }
+</script>
+@if (ViewBag.load_Layout == "1")
+{
+    Layout = "~/Views/Shared/_Layout_EditInfo.cshtml";
+}
+<h2>Chinh sua thong tin</h2>
+@using (Ajax.BeginForm("UpdateInfo","home",new AjaxOptions{
+    HttpMethod="POST",
+    InsertionMode=InsertionMode.Replace,
+    UpdateTargetId= "content",
+    LoadingElementId="loading",
+    OnComplete= "thanhCong"
+}))
+{
+    <input type="hidden" value="@Model.loai" name="loai"/>
+    <span style="width: 50px;">Dia chi:</span>
+    <input type="text" id="DiaChi" name="DiaChi" value="@Model.DiaChi.Trim()" />
+    <span style="width: 50px;">Email:</span> 
+    <input type="text" id="Email" name="Email" value="@Model.Email.Trim()"/>
+    <span style="width: 50px;">SDT:</span> 
+    <input type="text" id="SDT" name="SDT" value="@Model.SDT.Trim()" /><br />
+    <span style="width: 50px;">PassWord cu:  </span>
+    <input type="password" id="pass1" name="pass1" onblur="return kiemTraOldPass();"/> 
+    <span style="width: 50px;">PassWord moi: </span>
+    <input type="password" id="newPass" name="newPass" />
+    <span style="width: 50px;">Xac nhan lai: </span>
+    <input type="password" id="newPass1" name="newPass1" onblur="return kiemTraNewPass();" />
+    <input type="submit" value="cap nhat" onclick="return kiemTraNewPass();"/>
+}
